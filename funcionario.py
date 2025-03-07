@@ -101,7 +101,7 @@ class Funcionario(Pessoa):
         else:
             print(f"Eu não trabalho")
 
-    def set_carteira_trabalho(self):
+    def get_carteira_trabalho(self):
         if self._trabalhando:
             print(f"Eu tenho carteira de trabalho")
         elif self._trabalhando and self._carteira_trabalho:
