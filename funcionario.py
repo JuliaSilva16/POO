@@ -1,51 +1,46 @@
 class Pessoa:
     def __init__(self, nome, data_nascimento, cpf, rg, raca, genero, endereco, telefone,conta_atual ,CTPS,trabalhando=False, estudando=True):
-        self.nome = nome
-        self.data_nascimento = data_nascimento
-        self.cpf = cpf
-        self.registro_geral = rg
-        self.raca = raca
-        self.genero = genero
-        self.endereco = endereco
-        self.telefone = telefone
-        self.trabalhando = trabalhando
-        self.salario = 1800
-        self.conta_atual = conta_atual
-        self.carteira_trabalho = CTPS
-        self.estudando = estudando
+        self.__nome = nome
+        self.__data_nascimento = data_nascimento
+        self.__cpf = cpf
+        self.__registro_geral = rg
+        self._raca = raca
+        self._genero = genero
+        self.__endereco = endereco
+        self.__telefone = telefone
+        self._trabalhando = trabalhando
+        self._salario = 1800
+        self._conta_atual = conta_atual
+        self._carteira_trabalho = CTPS
+        self._estudando = estudando
 
     def apresentar(self):
-        print(f"Eu me chamo {self.nome},"
-              f"\nNasci em {self.data_nascimento},"
-              f"\nMeu CPF é {self.cpf},"
-              f"\nMeu RG {self.registro_geral},"
-              f"\nMinha raça é {self.raca},"
-              f"\nMeu gênero é {self.genero},"
-              f"\nMeu endereço é  {self.endereco}, "
-              f"\nMeu telefone: {self.telefone},"
+        print(f"Eu me chamo {self.__nome},"
+              f"\nNasci em {self.__data_nascimento},"
+              f"\nMeu CPF é {self.__cpf},"
+              f"\nMeu RG {self.__registro_geral},"
+              f"\nMinha raça é {self._raca},"
+              f"\nMeu gênero é {self._genero},"
+              f"\nMeu endereço é  {self.__endereco}, "
+              f"\nMeu telefone: {self.__telefone},"
               )
-        if self.estudando:
+        if self._estudando:
             print("Eu estudo")
         else:
             print(f"Eu não estudo")
 
-        if self.trabalhando:
+        if self._trabalhando:
             print(f"Eu Trabalho")
         else:
             print(f"Eu não trabalho")
 
-    def estudar(self):
-        if self.estudando:
-            print("Eu estudo")
-        else:
-            print(f"Eu não estudo")
+    def get_estudando(self):
+        return self._estudando
 
-    def trabalhar(self):
-        if self.trabalhando:
-            aumento = (self.salario + self.conta_atual)
-            print(f"Meu saldo anterior é de R${self.conta_atual},mas como trabalho agora tenho R${aumento}")
-        elif self.trabalhando:
-            print(f"Eu Trabalho")
+    def get_trabalhando(self):
+        if self._trabalhando:
+            aumento = (self._salario + self._conta_atual)
+            print(f"Meu saldo anterior é de R${self._conta_atual},mas como trabalho agora tenho R${aumento}")
         else:
             print(f"Eu não trabalho")
 
@@ -55,82 +50,80 @@ print('-' * 100)
 
 
 
-
-
 class Funcionario(Pessoa):
     def __init__(self, nome, data_nascimento, cpf,telefone,endereco,genero,raca, codigo,carteira_trabalho,trabalhando=True,estudando=False, ativo=True, habilidade_comunicacao=True):
         super().__init__(nome, data_nascimento,cpf, raca, genero, endereco, telefone, CTPS=True)
-        self.nome = nome
-        self.data_nascimento = data_nascimento
-        self.cpf = cpf
-        self.telefone=telefone
-        self.endereco=endereco
-        self.genero=genero
-        self.raca=raca
-        self.codigo = codigo
-        self.habilidade_comunicacao = True
-        self.trabalhando = trabalhando
-        self.salario = 1800
-        self.estudando = estudando
-        self.carteira_trabalho = carteira_trabalho
-        self.ativo = True
+        self.__nome = nome
+        self.__data_nascimento = data_nascimento
+        self.__cpf = cpf
+        self.__telefone=telefone
+        self.__endereco=endereco
+        self._genero=genero
+        self._raca=raca
+        self.__codigo = codigo
+        self._habilidade_comunicacao = True
+        self._trabalhando = trabalhando
+        self._salario = 1800
+        self._estudando = estudando
+        self.__carteira_trabalho = carteira_trabalho
+        self._ativo = True
 
     def apresentar(self):
-        print(f"Eu me chamo {self.nome},"
-              f"\nNasci em {self.data_nascimento},"
-              f"\nMeu CPF é {self.cpf},"
-              f"\nMeu telefone é {self.telefone},"
-              f"\nMeu endereço é {self.endereco},"
-              f"\nMeu genero é {self.genero},"
-              f"\nMinha raça é {self.raca},"
-              f"\nMeu código{self.codigo}"
+        print(f"Eu me chamo {self.__nome},"
+              f"\nNasci em {self.__data_nascimento},"
+              f"\nMeu CPF é {self.__cpf},"
+              f"\nMeu telefone é {self.__telefone},"
+              f"\nMeu endereço é {self.__endereco},"
+              f"\nMeu genero é {self._genero},"
+              f"\nMinha raça é {self._raca},"
+              f"\nMeu código{self.__codigo}"
               )
-        if self.habilidade_comunicacao:
+        if self._habilidade_comunicacao:
             print(f"Eu tenho habilidade de comunição")
         else:
             print(f"Eu não tenho habilidade de comunicação")
 
-        if self.ativo:
+        if self._ativo:
             print(f"Estou ativo")
         else:
             print(f"Não estou ativo")
 
-        if self.ativo:
-            self.trabalhando = True
+        if self._ativo:
+            self._trabalhando = True
             print(f"Estou ativo")
         else:
             print(f"Não estou ativo")
 
-    def trabalhar(self):
-        if self.trabalhando:
-            aumento = (self.salario + self.conta_atual)
-            print(f"Meu saldo anterior é de R${self.conta_atual},mas como trabalho agora tenho R${aumento}")
-        elif self.trabalhando:
-            print(f"Eu Trabalho")
+    def get_trabalhando(self):
+        if self._trabalhando:
+            aumento = (self._salario + self._conta_atual)
+            print(f"Meu saldo anterior é de R${self._conta_atual},mas como trabalho agora tenho R${aumento}")
         else:
             print(f"Eu não trabalho")
 
-    def carteira_trabalho(self):
-        if self.trabalhando:
+    def set_carteira_trabalho(self):
+        if self._trabalhando:
             print(f"Eu tenho carteira de trabalho")
-        elif self.trabalhando and self.carteira_trabalho:
-            print(f"A caminha carteira de trabalho é {self.carteira_trabalho}")
+        elif self._trabalhando and self._carteira_trabalho:
+            print(f"A caminha carteira de trabalho é {self._carteira_trabalho}")
         else:
             print(f"Eu não tenho carteira de trabalho")
 
-    def habilidade_comunicacao(self):
-        if self.habilidade_comunicacao:
+    def get_habilidade_comunicacao(self):
+        if self._habilidade_comunicacao:
             print(f"tenho habilidade")
-            self.habilidade_comunicacao = True
+            self._habilidade_comunicacao = True
         else:
             print(f"Eu não tenho habilidade")
 
-    def ativar(self):
-        if self.ativo:
+    def set_ativar(self):
+        if self._ativo:
             print(f"Estou ativo")
-            self.trabalhando = True
+            self._trabalhando = True
         else:
             print(f"Não estou ativo")
 
 f1 = Pessoa("Roberta","25/08/2000","1254","162","branca","feminino",
             "rua jjghioug 122","1254555565845","1254", "1527")
+
+# set verifica e passa a informação / get recebe/pega irm=formacao / is fazer algo
