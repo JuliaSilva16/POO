@@ -45,9 +45,8 @@ class Pessoa:
             print(f"Eu não trabalho")
 
 p1 = Pessoa("Júlia", "23/09/2007", "123","1269", "preto", "feminino",
-            "rua naomi sanomyia 230","18 991925870","245756","152")
+            "rua naomi sanomyia 230","18 991925870","2456","1520")
 print('-' * 100)
-
 
 
 class Funcionario(Pessoa):
@@ -124,6 +123,6 @@ class Funcionario(Pessoa):
             print(f"Não estou ativo")
 
 f1 = Pessoa("Roberta","25/08/2000","1254","162","branca","feminino",
-            "rua jjghioug 122","1254555565845","1254", "1527")
+            "rua Doutor Alvino Alves da Costa  122","18 99188-1748","1254", "1527")
 
 # set verifica e passa a informação / get recebe/pega irm=formacao / is fazer algo

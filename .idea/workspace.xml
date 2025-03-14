@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9ad373b-e25f-4895-8ee9-774a65ed113c" name="Changes" comment="TAREFA_T.O">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funcionario.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcionario.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JuliaSilva16&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JuliaSilva16/POO.git&quot;,
+    &quot;accountId&quot;: &quot;2464467d-b12d-41d0-bc61-d3dc319a8194&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -73,6 +86,10 @@
       <workItem from="1740662013032" duration="4704000" />
       <workItem from="1740739651517" duration="20000" />
       <workItem from="1741362342965" duration="56000" />
+      <workItem from="1741362581239" duration="8081000" />
+      <workItem from="1741866253048" duration="1422000" />
+      <workItem from="1741868867297" duration="1603000" />
+      <workItem from="1741872218810" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="TAREFA_T.O">
       <option name="closed" value="true" />
@@ -98,7 +115,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740681956658</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TAREFA_T.O">
+      <option name="closed" value="true" />
+      <created>1741362592247</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741362592247</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TAREFA_T.O">
+      <option name="closed" value="true" />
+      <created>1741375666764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741375666764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TAREFA_T.O">
+      <option name="closed" value="true" />
+      <created>1741375721951</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741375721951</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
