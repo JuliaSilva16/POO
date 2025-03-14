@@ -1,5 +1,6 @@
 class Pessoa:
-    def __init__(self, nome, data_nascimento, cpf, rg, raca, genero, endereco, telefone,conta_atual ,CTPS,trabalhando=False, estudando=True):
+    def __init__(self, nome, data_nascimento, cpf, rg, raca, genero, endereco, telefone,conta_atual ,CTPS,
+                 trabalhando=False, estudando=True):
         self.__nome = nome
         self.__data_nascimento = data_nascimento
         self.__cpf = cpf
@@ -50,15 +51,10 @@ print('-' * 100)
 
 
 class Funcionario(Pessoa):
-    def __init__(self, nome, data_nascimento, cpf,telefone,endereco,genero,raca, codigo,carteira_trabalho,trabalhando=True,estudando=False, ativo=True, habilidade_comunicacao=True):
+    def __init__(self, nome, data_nascimento, cpf,telefone,endereco,genero,raca, codigo,carteira_trabalho,
+                 trabalhando=True,estudando=False):
         super().__init__(nome, data_nascimento,cpf, raca, genero, endereco, telefone, CTPS=True)
-        self.__nome = nome
-        self.__data_nascimento = data_nascimento
-        self.__cpf = cpf
         self.__telefone=telefone
-        self.__endereco=endereco
-        self._genero=genero
-        self._raca=raca
         self.__codigo = codigo
         self._habilidade_comunicacao = True
         self._trabalhando = trabalhando
